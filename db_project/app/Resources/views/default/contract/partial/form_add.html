@@ -1,0 +1,26 @@
+<div class="form-group">
+    <form action="<?php echo basePath() ?>contract/add" method="POST">
+        <div class="form-group">
+            <label for="lekarz">Lekarz</label>
+            <select name="lekarz" id="lekarz">
+                <?php
+                    foreach($doctors as $doctor) {
+                        echo "<option value=\"{$doctor['id']}\">{$doctor['imie']} {$doctor['nazwisko']}</option>";
+                }
+                ?>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="placowka">Placówka</label>
+            <select name="placowka" id="placowka">
+                <?php
+                    foreach($institutions as $institution) {
+                        echo "<option value=\"{$institution['id']}\">{$institution['nazwa']}</option>";
+                    }
+                ?>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Dodaj</button>
+    </form>
+</div>
+

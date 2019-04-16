@@ -1,0 +1,1 @@
+<h2>Witaj <?php echo $patient[0]['imie'] . " " . $patient[0]['nazwisko']; ?></h2>
